@@ -5,4 +5,9 @@ class Testimoni (
     val name: String,
     val comment: String,
     val rating: Int
-)
+){
+
+    constructor(): this("","","",0){
+
+    }
+}
