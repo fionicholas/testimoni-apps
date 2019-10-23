@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                         val testi = h.getValue(Testimoni::class.java)
                         testiList.add(testi!!)
                     }
-                    val adapter = TestiAdapter(applicationContext, R.layout.card_testimoni, testiList)
+                    val adapter = TestiAdapter(this@MainActivity, R.layout.card_testimoni, testiList)
                     listView.adapter = adapter
 
                 }
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         val testiId = ref.push().key
 
-        val testi = Testimoni(testiId, name, comment, ratingBar.numStars)
+        val testi = Testimoni(testiId, name, comment, ratingBar.rating.toInt())
         ref.child(testiId!!).setValue(testi).addOnCompleteListener {
             Toast.makeText(applicationContext, "Testi has been sent", Toast.LENGTH_LONG).show()
         }
