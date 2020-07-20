@@ -1,7 +1,7 @@
 # Testimoni App
 Testimoni App With Kotlin and Firebase
 
-# Features :
+# Features
 - Send Testimoni to database
 - Read Testimoni
 - Update Testimoni
